@@ -1,1 +1,36 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="comment_comment" id="1" x="127" y="47">
+    <field name="TEXT">MyActiv1 move by passing random numbers to moters</field>
+    <next>
+      <block type="controls_repeat" id="2" inline="true">
+        <value name="TIMES">
+          <block type="math_number" id="3">
+            <field name="NUM">20</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="movement_setmotors" id="4" inline="true">
+            <value name="BOTHMOVLEFT">
+              <block type="math_random" id="5"></block>
+            </value>
+            <value name="BOTHMOVRIGHT">
+              <block type="math_random" id="6"></block>
+            </value>
+            <next>
+              <block type="robot_delay" id="7" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="8">
+                    <field name="NUM">500</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="movement_stop" id="9"></block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

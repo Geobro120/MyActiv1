@@ -14,7 +14,9 @@
               <block type="math_random" id="5"></block>
             </value>
             <value name="BOTHMOVRIGHT">
-              <block type="math_random" id="6"></block>
+              <block type="math_number" id="16">
+                <field name="NUM">0</field>
+              </block>
             </value>
             <next>
               <block type="robot_delay" id="7" inline="true">
